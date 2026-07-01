@@ -19,6 +19,8 @@ metrics/logs/traces stack.
 | [tdd/semantic_layer_tdd_v1](tdd/semantic_layer_tdd_v1.docx) | know-hub | Phase 1 semantic search (Ollama embeddings, pgvector, hybrid RRF). |
 | [tdd/logging_audit_tdd_v2](tdd/logging_audit_tdd_v2.docx) | audit-hub | Logging and audit trail. |
 | [tdd/observability_tdd_v1](tdd/observability_tdd_v1.docx) | Platform | Observability — metrics, logs, and traces. |
+| [tdd/agentic_ai_tdd_v1](tdd/agentic_ai_tdd_v1.docx) | agent-hub | Phase 3 agentic AI — single-agent CRAG + multi-agent ingestion crew (LangGraph). |
+| [tdd/evaluation_harness_tdd_v1](tdd/evaluation_harness_tdd_v1.docx) | agent-hub | Phase 4 evaluation & experimentation — RAGAS, local LLM-as-judge, datasets, statistical rigor, CI regression gate. |
 
 ## Layout
 
