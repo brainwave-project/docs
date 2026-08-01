@@ -27,7 +27,8 @@ metrics/logs/traces stack.
 ```
 docs/
 ├── brainwave_mvp_summary.docx   # product / MVP overview
-└── tdd/                         # per-component technical design documents
+├── tdd/                         # per-component technical design documents
+└── baselines/                   # dated performance/cost/deployment baseline captures
 ```
 
 ## Conventions
@@ -35,3 +36,7 @@ docs/
 - TDDs live under `tdd/` and are versioned in the filename (`*_v1`, `*_v2`).
 - Operational/runbook docs live alongside their service (e.g. `DEPLOYMENT.md`
   in the monorepo root), not here — this repo is for design references.
+- **Exception:** `baselines/` holds dated, append-only performance/cost/
+  deployment snapshots (see [baselines/2026-08-01-initial-baseline.md](baselines/2026-08-01-initial-baseline.md)).
+  These live here rather than per-service because they cut across multiple
+  hubs; never overwrite an existing capture, add a new dated file instead.
