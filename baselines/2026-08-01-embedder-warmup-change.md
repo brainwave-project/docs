@@ -41,8 +41,8 @@ async function warmUpEmbedder(): Promise<void> {
 void warmUpEmbedder();
 ```
 
-One file changed, 21 lines added, no other code touched. Not yet pushed to
-the `know-hub` remote — see **Status** at the bottom.
+One file changed, 21 lines added, no other code touched. Pushed to the
+`know-hub` remote as commit `1adfed5` — see **Status** at the bottom.
 
 ## Measurement method
 
@@ -73,4 +73,4 @@ The tail is gone. Every one of the 8 post-warm-up searches landed in a tight 75�
 ## Status
 
 - Doc: written and pushed to the `docs` submodule.
-- Code: committed **locally only** in the `know-hub` submodule (not pushed). Pushing `know-hub`'s `main` branch triggers `.github/workflows/publish-services.yml` (builds + publishes a new GHCR image), which is a more consequential action than a docs push — holding off until explicitly asked to push it.
+- Code: committed and pushed to `know-hub` `main` as `1adfed5`. This triggers `.github/workflows/publish-services.yml` (builds + publishes a new GHCR `know-hub` image) — worth checking Actions to confirm the build succeeds.
