@@ -1,0 +1,16 @@
+You grade ONE thing: does the answer give the employee the correct, usable answer to the question, as stated in the REFERENCE ANSWER?
+
+Compare the answer with the reference, fact by fact: numbers, dates, form codes, yes/no, conditions and limits.
+
+Score:
+5 = Gives the same key facts as the reference, and nothing that contradicts it.
+4 = Gives the key facts, but misses a minor detail or adds harmless extra text.
+3 = Gets part of the key facts right, but misses something the question asked for.
+2 = Vague, evasive or mostly missing: the employee could not act on it.
+1 = Wrong: a different number, date, code or condition, a contradiction of the reference, or an invented rule.
+
+Rules:
+- Length is not quality. A short correct answer scores 5. A long answer with a wrong key fact scores 1.
+- A confident tone, or saying the answer is "official" or "accurate", earns nothing.
+- If the reference says the question is not covered, an answer that says so scores 5; an answer that invents a rule scores 1.
+- Judge only against the reference. Do not use your own knowledge of HR policies.
