@@ -1,0 +1,1149 @@
+{
+  "id": "arabic-norm-diagnostic",
+  "name": "Arabic normalization diagnostic (16 passages, 12 queries)",
+  "source": "Original fictional Brainwave diagnostic fixture, 2026-10-06; docs MIT license; not MIRACL and not representative of Arabic retrieval",
+  "scope": "diagnostic",
+  "corpus": [
+    {
+      "passage_id": "diag-01",
+      "title": "",
+      "text": "الإِجَازَةُ السَّنَوِيَّةُ في شركة السهل الخيالية عشرون يوما. يقدم الموظف الطلب قبل السفر."
+    },
+    {
+      "passage_id": "diag-02",
+      "title": "",
+      "text": "إجــراءات الســفر في شركة السهل تبدأ بتعبئة استمارة الرحلة ثم موافقة المدير."
+    },
+    {
+      "passage_id": "diag-03",
+      "title": "",
+      "text": "أوقات العمل في مركز السهل من الثامنة صباحا حتى الثالثة عصرا."
+    },
+    {
+      "passage_id": "diag-04",
+      "title": "",
+      "text": "المَكْتَبَة العَامَّة تستقبل القراء يوم السبت وتوفر كتبا للإعارة."
+    },
+    {
+      "passage_id": "diag-05",
+      "title": "",
+      "text": "اشتراك النادي يتطلب بطاقة شخصية. يقدم النادي دروس سباحة مساء الخميس."
+    },
+    {
+      "passage_id": "diag-06",
+      "title": "",
+      "text": "المنحة ٢٠٢٦ تدعم طلاب التصميم. يبدأ استقبال الطلبات في شهر نيسان."
+    },
+    {
+      "passage_id": "diag-07",
+      "title": "",
+      "text": "علي مصمم يعمل في مرسم السهل. هذه بطاقة تعريفه في دليل الموظفين."
+    },
+    {
+      "passage_id": "diag-08",
+      "title": "",
+      "text": "على الطاولة صندوق يحوي أدوات الرسم. هذه عبارة لتدريب الطلاب على حروف الجر."
+    },
+    {
+      "passage_id": "diag-09",
+      "title": "",
+      "text": "هدى تدير مرسم السهل وتنظم معرض الطلاب. هذه بطاقة تعريفها في دليل الموظفين."
+    },
+    {
+      "passage_id": "diag-10",
+      "title": "",
+      "text": "هدي الحجاج موضوع الدرس، ويشرح المعلم الفرق بينه وبين الصدقة."
+    },
+    {
+      "passage_id": "diag-11",
+      "title": "",
+      "text": "عِلْم يصف نشاط دراسة الظواهر بالملاحظة والتجربة. هذا تعريف في معجم تعليمي."
+    },
+    {
+      "passage_id": "diag-12",
+      "title": "",
+      "text": "عَلَم قطعة قماش تمثل فريقا أو بلدا. هذا تعريف في معجم تعليمي."
+    },
+    {
+      "passage_id": "diag-13",
+      "title": "",
+      "text": "ماء سائل يملأ الكأس. هذه جملة قصيرة في كتاب القراءة."
+    },
+    {
+      "passage_id": "diag-14",
+      "title": "",
+      "text": "ما أداة تستعمل للسؤال أو النفي. هذه ملاحظة قصيرة في كتاب النحو."
+    },
+    {
+      "passage_id": "diag-15",
+      "title": "",
+      "text": "مدرسة مبنى يتعلم فيه الطلاب. يشرح هذا المدخل معنى المؤسسة التعليمية."
+    },
+    {
+      "passage_id": "diag-16",
+      "title": "",
+      "text": "مدرسه عاد من الرحلة. يقصد الكاتب معلم الطالب الذي يدرسه، وهو رجل."
+    }
+  ],
+  "queries": [
+    {
+      "qid": "diag-q01",
+      "query": "الاجازة السنوية",
+      "tags": [
+        "alef",
+        "diacritics",
+        "unchanged_query"
+      ]
+    },
+    {
+      "qid": "diag-q02",
+      "query": "إجراءات السفر",
+      "tags": [
+        "tatweel",
+        "document_variation"
+      ]
+    },
+    {
+      "qid": "diag-q03",
+      "query": "اوقات العمل",
+      "tags": [
+        "alef",
+        "unchanged_query"
+      ]
+    },
+    {
+      "qid": "diag-q04",
+      "query": "المكتبة العامة",
+      "tags": [
+        "diacritics",
+        "unchanged_query"
+      ]
+    },
+    {
+      "qid": "diag-q05",
+      "query": "اشتراك النادي",
+      "tags": [
+        "control"
+      ]
+    },
+    {
+      "qid": "diag-q06",
+      "query": "المنحة 2026",
+      "tags": [
+        "digits",
+        "outside_primary_rules"
+      ]
+    },
+    {
+      "qid": "diag-q07",
+      "query": "علي",
+      "tags": [
+        "named_entity",
+        "alef_maqsura",
+        "collision"
+      ]
+    },
+    {
+      "qid": "diag-q08",
+      "query": "هدى",
+      "tags": [
+        "named_entity",
+        "alef_maqsura",
+        "collision"
+      ]
+    },
+    {
+      "qid": "diag-q09",
+      "query": "عِلْم",
+      "tags": [
+        "diacritics",
+        "collision"
+      ]
+    },
+    {
+      "qid": "diag-q10",
+      "query": "ماء",
+      "tags": [
+        "bare_hamza",
+        "outside_primary_rules"
+      ]
+    },
+    {
+      "qid": "diag-q11",
+      "query": "مدرسة",
+      "tags": [
+        "taa_marbuta",
+        "collision"
+      ]
+    },
+    {
+      "qid": "diag-q12",
+      "query": "بطاقة شخصية",
+      "tags": [
+        "control"
+      ]
+    }
+  ],
+  "qrels": [
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-01",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q01",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-02",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q02",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-03",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q03",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-04",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q04",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-05",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q05",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-06",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q06",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-07",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q07",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-09",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q08",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-11",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q09",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-13",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q10",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-05",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-15",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q11",
+      "passage_id": "diag-16",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-01",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-02",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-03",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-04",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-05",
+      "relevance": 1
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-06",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-07",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-08",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-09",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-10",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-11",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-12",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-13",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-14",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-15",
+      "relevance": 0
+    },
+    {
+      "qid": "diag-q12",
+      "passage_id": "diag-16",
+      "relevance": 0
+    }
+  ]
+}

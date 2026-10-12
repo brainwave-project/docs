@@ -1,0 +1,1 @@
+date	run_id	dataset_id	scope	query_split	query_count	passage_count	corpus_revision	topics_revision	model_revision	code_revision	presets	retrievers	normalization_side	seed	bootstrap_samples	hardware	elapsed_seconds	protocol_deviation	artifact_path

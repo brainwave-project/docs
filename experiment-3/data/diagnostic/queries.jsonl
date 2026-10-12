@@ -1,0 +1,12 @@
+{"qid":"diag-q01","query":"الاجازة السنوية","tags":["alef","diacritics","unchanged_query"]}
+{"qid":"diag-q02","query":"إجراءات السفر","tags":["tatweel","document_variation"]}
+{"qid":"diag-q03","query":"اوقات العمل","tags":["alef","unchanged_query"]}
+{"qid":"diag-q04","query":"المكتبة العامة","tags":["diacritics","unchanged_query"]}
+{"qid":"diag-q05","query":"اشتراك النادي","tags":["control"]}
+{"qid":"diag-q06","query":"المنحة 2026","tags":["digits","outside_primary_rules"]}
+{"qid":"diag-q07","query":"علي","tags":["named_entity","alef_maqsura","collision"]}
+{"qid":"diag-q08","query":"هدى","tags":["named_entity","alef_maqsura","collision"]}
+{"qid":"diag-q09","query":"عِلْم","tags":["diacritics","collision"]}
+{"qid":"diag-q10","query":"ماء","tags":["bare_hamza","outside_primary_rules"]}
+{"qid":"diag-q11","query":"مدرسة","tags":["taa_marbuta","collision"]}
+{"qid":"diag-q12","query":"بطاقة شخصية","tags":["control"]}

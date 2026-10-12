@@ -1,0 +1,16 @@
+{
+  "id": "arabic-norm-diagnostic",
+  "name": "Arabic normalization diagnostic (16 passages, 12 queries)",
+  "source": "Original fictional Brainwave diagnostic fixture, 2026-10-06; docs MIT license; not MIRACL and not representative of Arabic retrieval",
+  "scope": "diagnostic",
+  "language": "ar",
+  "created": "2026-10-06",
+  "license": "MIT (docs/LICENSE)",
+  "counts": {
+    "passages": 16,
+    "queries": 12,
+    "judgments": 192
+  },
+  "judgment_policy": "Every query-passage pair has an authored binary relevance judgment. Labels reflect the intended query sense documented in README.md; use to test mechanics, not estimate population effects.",
+  "source_selection": "Purposive authored orthographic stress cases and controls; no random sampling."
+}

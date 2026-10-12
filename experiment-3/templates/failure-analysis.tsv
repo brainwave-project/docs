@@ -1,0 +1,1 @@
+run_id	comparison	qid	query_original	query_normalized	category	baseline_ndcg10	candidate_ndcg10	delta_ndcg10	relevant_passage_id	baseline_rank	candidate_rank	competing_passage_id	mechanism	evidence	annotation_timing	reviewer	notes
