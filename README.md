@@ -13,6 +13,7 @@ metrics/logs/traces stack.
 
 | Document | Component | Description |
 |----------|-----------|-------------|
+| [Architecture](architecture/README.md) | Platform | Current-state system context, component, data-flow, and deployment diagrams. |
 | [MVP Summary](brainwave_mvp_summary.docx) | Platform | Product overview and MVP scope. |
 | [tdd/brainwave_auth_tdd_v2](tdd/brainwave_auth_tdd_v2.docx) | auth-hub | Authentication & identity (Keycloak facade). |
 | [tdd/knowhub_tdd_v2](tdd/knowhub_tdd_v2.docx) | know-hub | Document lifecycle and dual-store persistence. |
@@ -27,6 +28,7 @@ metrics/logs/traces stack.
 ```
 docs/
 ├── brainwave_mvp_summary.docx   # product / MVP overview
+├── architecture/                 # current-state HLA and editable diagrams
 ├── tdd/                         # per-component technical design documents
 └── baselines/                   # dated performance/cost/deployment baseline captures
 ```

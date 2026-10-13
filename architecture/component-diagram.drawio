@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-12T12:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="brainwave-components" name="Components and Interactions">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Brainwave — Components, Data Ownership, and Service Interactions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1350" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Observed runtime wiring at the evidence baseline. Dormant adapters are explicitly marked." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#4b5563;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1100" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="client-zone" value="CLIENT / EDGE" style="swimlane;horizontal=0;startSize=30;html=1;rounded=1;fillColor=#f8fafc;strokeColor=#94a3b8;fontColor=#475569;fontStyle=1;fontSize=12;collapsible=0;container=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="115" width="430" height="930" as="geometry"/>
+        </mxCell>
+        <mxCell id="service-zone" value="APPLICATION SERVICES" style="swimlane;horizontal=0;startSize=30;html=1;rounded=1;fillColor=#fffbeb;strokeColor=#d6b656;fontColor=#92400e;fontStyle=1;fontSize=12;collapsible=0;container=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="115" width="760" height="930" as="geometry"/>
+        </mxCell>
+        <mxCell id="platform-zone" value="PLATFORM DATA / AI / EVENTS" style="swimlane;horizontal=0;startSize=30;html=1;rounded=1;fillColor=#f0fdf4;strokeColor=#82b366;fontColor=#166534;fontStyle=1;fontSize=12;collapsible=0;container=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="115" width="650" height="930" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="users" value="&lt;b&gt;Users / Operators&lt;/b&gt;&lt;br&gt;Knowledge work • administration • quality engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fontSize=13;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="75" y="170" width="310" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui" value="&lt;b&gt;React UI&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Vite SPA • bearer tokens • REST/SSE clients&lt;br&gt;Dev proxies /api and /api/eval&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="75" y="290" width="310" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="kong" value="&lt;b&gt;Kong Gateway :8000&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;RS256 JWT • routes • rate limits • CORS&lt;br&gt;X-User-* + X-Correlation-Id • SSE pass-through&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="75" y="455" width="310" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="keycloak" value="&lt;b&gt;Keycloak :8080&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Identity • credentials • sessions&lt;br&gt;JWT issuer • runtime realm roles&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="75" y="655" width="310" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="core" value="&lt;b&gt;@brainwave-project/core&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Shared TS library—not a service&lt;br&gt;events • errors • middleware • telemetry • AI helpers&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="75" y="840" width="310" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="auth" value="&lt;b&gt;Auth Hub :3000 / :50051&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Login • refresh • logout • password flows&lt;br&gt;Introspection • JWKS • token validation&lt;br&gt;&lt;i&gt;No owned application database&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="555" y="165" width="290" height="135" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="&lt;b&gt;User Hub :3001&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;User lifecycle • local roles/permissions&lt;br&gt;Keycloak admin provisioning&lt;br&gt;&lt;i&gt;Preference model exists; no active API&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="905" y="165" width="290" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="know" value="&lt;b&gt;Know Hub :3002 / gRPC :50052&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Documents • notes • upload saga&lt;br&gt;semantic search • fixed semantic worker&lt;br&gt;conversational RAG • authoritative document/vector writes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=3;fontSize=16;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="555" y="390" width="340" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="agent" value="&lt;b&gt;Agent Hub :3004&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Corrective RAG + SSE&lt;br&gt;governance • checkpoints • run trajectories&lt;br&gt;Kafka-driven adaptive ingestion crew&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=3;fontSize=16;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="940" y="390" width="270" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit" value="&lt;b&gt;Audit Hub :3003&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;All-topic Kafka consumer&lt;br&gt;append-only audit read model&lt;br&gt;read-only activity API&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="555" y="675" width="290" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="eval" value="&lt;b&gt;Eval API :3005&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Dev-only • localhost-bound&lt;br&gt;datasets • experiments • judges • gates&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8ff;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=15;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="920" y="680" width="290" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="dormant" value="&lt;b&gt;Declared / dormant auth path&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;User/Know Auth Hub gRPC clients exist, but no active router mounts their middleware.&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#374151;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="875" width="470" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="kafka" value="&lt;b&gt;Kafka&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;auth.events&lt;br&gt;user.events&lt;br&gt;document.events&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="165" width="200" height="135" as="geometry"/>
+        </mxCell>
+        <mxCell id="otel" value="&lt;b&gt;Observability Plane&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Prometheus directly scrapes Kong, TS hubs, OTel + exporters&lt;br&gt;Promtail → Loki • development OTLP traces → Collector → Tempo&lt;br&gt;Collector metrics/log pipelines available • Grafana • Alertmanager&lt;br&gt;&lt;i&gt;Agent has no current OTel/Prometheus target&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1640" y="145" width="280" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="postgres" value="&lt;b&gt;PostgreSQL + pgvector&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;user_management → User Hub&lt;br&gt;doc / sem / chat → Know Hub&lt;br&gt;agent → Agent Hub • audit → Audit Hub&lt;br&gt;langfuse database&lt;br&gt;Keycloak database in staging only&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=18;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="385" width="300" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="mongo" value="&lt;b&gt;MongoDB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Structured document payloads&lt;br&gt;document notes&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=18;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="390" width="200" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="minio" value="&lt;b&gt;MinIO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Binary objects&lt;br&gt;hot / cold buckets&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=18;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="535" width="200" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="ollama" value="&lt;b&gt;Ollama&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;nomic-embed-text&lt;br&gt;local reasoning model&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="700" width="230" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="langfuse" value="&lt;b&gt;Langfuse&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Prompts + LLM traces&lt;br&gt;optional / fail-open&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=14;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="700" width="230" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="labstore" value="&lt;b&gt;LabStore files&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Versioned JSON/JSONL&lt;br&gt;datasets • runs • judge/gate artifacts&lt;/font&gt;" style="shape=folder;tabWidth=50;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#f3e8ff;strokeColor=#8b5cf6;strokeWidth=2;fontSize=13;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="890" width="300" height="115" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e-users-ui" value="Uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="users" target="ui"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-ui-kong" value="REST / SSE&lt;br&gt;JWT protected routes; Auth routes public" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ui" target="kong"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-kong-auth" value="/api/auth • /api/tokens" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kong" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kong-user" value="/api/users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kong" target="user"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kong-know" value="/api/documents • notes • semantic • chat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kong" target="know"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kong-agent" value="/api/agent • SSE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kong" target="agent"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kong-audit" value="/api/audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kong" target="audit"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-auth-kc" value="OIDC / OAuth2 / Admin REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="auth" target="keycloak"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-user-kc" value="Admin REST&lt;br&gt;create / compensate delete" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="user" target="keycloak"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-agent-know" value="DocumentInternal gRPC&lt;br&gt;search • payload • chunks • metadata" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="agent" target="know"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-user-pg" value="user_management" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="user" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-know-pg" value="doc • sem • chat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-agent-pg" value="agent + checkpoints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="agent" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-audit-pg" value="audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="audit" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-know-mongo" value="payloads / notes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="mongo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-know-minio" value="binary objects" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="minio"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-ui-minio" value="browser-direct presigned GET&lt;br&gt;requires browser-resolvable MinIO endpoint" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=2;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ui" target="minio"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="430" y="610"/><mxPoint x="1680" y="610"/></Array></mxGeometry></mxCell>
+        <mxCell id="e-keycloak-pg" value="staging: PostgreSQL&lt;br&gt;production: dev-file" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="keycloak" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-langfuse-pg" value="langfuse database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#15803d;strokeWidth=2;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="langfuse" target="postgres"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-auth-kafka" value="auth events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="auth" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-user-kafka" value="user events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="user" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-know-kafka" value="document events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-agent-kafka" value="consume uploads / emit completion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="agent" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kafka-audit" value="all topics" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kafka" target="audit"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-kafka-know" value="DOCUMENT_UPLOADED&lt;br&gt;when semantic worker enabled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d97706;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="kafka" target="know"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-know-ollama" value="embed / chat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="ollama"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-agent-ollama" value="grade / rewrite / generate / embed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="agent" target="ollama"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-know-lf" value="prompt / traces (optional)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7c3aed;strokeWidth=1;dashed=1;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="know" target="langfuse"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-agent-lf" value="integration available&lt;br&gt;development disabled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="agent" target="langfuse"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-ui-eval" value="/api/eval&lt;br&gt;dev-only, bypasses Kong" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ui" target="eval"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-eval-know" value="direct HTTP + gRPC&lt;br&gt;synthetic headers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="eval" target="know"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-eval-ollama" value="generation / judges" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="eval" target="ollama"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-eval-store" value="versioned artifacts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="eval" target="labstore"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e-services-otel" value="development only: Auth/User/Know/Audit&lt;br&gt;OTLP traces; Agent and Eval excluded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="service-zone" target="otel"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-prom-scrape" value="Prometheus scrapes Auth/User/Know/Audit&lt;br&gt;Agent excluded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="otel" target="service-zone"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-prom-kong" value="Prometheus scrape Kong :8001" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="otel" target="kong"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-promtail-logs" value="container stdout → Promtail → Loki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="service-zone" target="otel"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1280" y="1030"/><mxPoint x="1940" y="1030"/></Array></mxGeometry></mxCell>
+        <mxCell id="e-core-auth" value="core package" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="core" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-core-user" value="core package" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="core" target="user"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-core-know" value="core package" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="core" target="know"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-core-audit" value="core package" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="core" target="audit"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-dormant-auth" value="gRPC ValidateToken — declared/dormant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#6b7280;strokeWidth=1;dashed=1;dashPattern=2 4;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dormant" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#2563eb&quot;&gt;━━ synchronous HTTP / SSE / gRPC&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#d97706&quot;&gt;┄┄ Kafka event&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#6b7280&quot;&gt;·· telemetry, config, dependency, or dormant&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#8b5cf6&quot;&gt;┄┄ development/evaluation-only&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontSize=11;fontColor=#1f2937;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="865" width="180" height="140" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
